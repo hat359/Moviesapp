@@ -28,7 +28,7 @@ const connect = mongoose.connect(config.mongoURI,
 const port =process.env.PORT || 5000
 
 if(process.env.NODE_ENV==="production"){
-app.use(expres.static('client/build'))
+app.use(express.static('client/build'))
 
 const path=require('path')
 
