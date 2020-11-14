@@ -392,3 +392,54 @@ transform: translate(-50%,0);
 
   
 }
+
+
+@media only screen and (max-width: 600px) {
+
+  .mimg{
+    height:250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    }
+
+    .title{
+      font-size: 20px;
+       font-weight: 600;
+       margin-left: -10%;
+     position: relative;
+     text-align: left;
+     }
+     .desc{
+ display:none
+     }
+    
+     .card{
+      
+      margin-top: 25px;
+      border: none;
+      width:6rem !important;
+      }
+      .card img{
+        border-radius: 10px;
+      }
+         
+      .container{
+       max-width: 100%;
+       
+       }
+
+       .progress-bar{
+        color:black;
+        font-weight: 600;
+        
+          }
+          .progress{
+            
+        height: 20px;
+        margin-top: 10px;
+        width: 6rem;
+          }
+
+
+}

@@ -1,10 +1,15 @@
-import React,{useContext} from 'react'
+import React,{useContext,useState} from 'react'
 import {Navbar} from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav'
 import Usercontext from '../context/Usercontext'
 
 function Navigation(){
   const {userdata,setUserdata}=useContext(Usercontext)
+  
+  const str=userdata.user && userdata.user.name.split(" ",1)
+
+ 
+
 
   const logout=()=>{
     
@@ -17,6 +22,9 @@ function Navigation(){
     localStorage.setItem("auth-token","")
     localStorage.removeItem("userId")
     window.location.reload()
+
+ 
+   
 
   }
 return(
@@ -35,7 +43,7 @@ return(
     <Nav className="ml-auto">
      
       {userdata.user ?( 
-<a className="logoutbut" onClick={logout}><span>Logout</span></a>):(<>
+    <div> <span>Welcome {str[0]}!</span>&nbsp <a className="logoutbut" onClick={logout}><span>Logout</span> </a></div> ):(<>
   <Nav.Link href="/login"><span>SignIn</span></Nav.Link>
   <Nav.Link href="/register"><span>SignUp</span></Nav.Link>
 </>
