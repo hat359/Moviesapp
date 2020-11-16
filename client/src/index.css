@@ -129,7 +129,10 @@ color: white;
 width: 40px;
 
 }
+.logoutbut{
+transform: translate(0,8px);
 
+}
 
 .logoutbut:hover{
 cursor: pointer;
@@ -164,10 +167,12 @@ margin-left: -10%;
       background-color: black;
       
       }
+  
     
 .card{
- margin-left: 50px;
- margin-top: 25px;
+
+ margin-left: 3rem;
+ margin-top: 1.5rem;
  border: none;
  border-radius: 10px;
  }
@@ -262,10 +267,7 @@ cursor: pointer;
 
 
 }
-.simimg{
 
-
-}
 .simimg img{
 
 border-radius: 20px;
@@ -388,10 +390,7 @@ transform: translate(-50%,0);
   margin-left: 50%;
 }
 
-.dropbut{
 
-  
-}
 
 
 @media only screen and (max-width: 600px) {
@@ -441,5 +440,23 @@ transform: translate(-50%,0);
         width: 6rem;
           }
 
+
+}
+
+li{
+color:white
+
+}
+
+#wel{
+margin-right: 30px;
+  
+}
+
+li > a{
+  color: white !important;
+}
+.active{
+border-bottom: 2px solid white;
 
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Navigation from '../Navigation'
 
 import Castgrid from './Castgrid'
 import Similar from'./Similar'
@@ -149,6 +150,7 @@ render(){
  
 return(
 <div className="details">
+  <Navigation path={this.props.match.path}/>
 <div className="poster" style={{backgroundImage:`url('${img_url}w1280/${this.state.mm.backdrop_path}')`}}>
 
 

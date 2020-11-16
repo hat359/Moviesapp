@@ -1,4 +1,5 @@
 import React from 'react'
+import Navigation from '../Navigation'
 
 import Banner from '../carousel/Banner'
 import ShowsGrid from './ShowsGrid'
@@ -66,7 +67,7 @@ componentDidUpdate(prevProps,prevState){
 render(){
 return(
 <div>
-
+<Navigation path={this.props.match.path}/>
 
 { 
 this.state.shows[x] &&  <Banner image1={`${img_url}w1280${this.state.shows[x].backdrop_path}`} title1={this.state.shows[x].original_name}

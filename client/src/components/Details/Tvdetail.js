@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+import Navigation from '../Navigation'
 import Castgrid from './Castgrid'
 import Tvsim from'./Tvsim'
 import Carousel from "react-multi-carousel";
@@ -119,6 +119,7 @@ render(){
    
 return(
 <div>
+  <Navigation path={this.props.match.path}/>
 <div className="poster" style={{backgroundImage:`url('${img_url}w1280/${this.state.mm.backdrop_path}')`}}>
 
 
@@ -170,7 +171,7 @@ return(
 
 {this.state.similar.length !==0 ? (<div className="simcara">
 <div className="container">
-  <p>Similar Movies</p>
+  <p>Similar Shows</p>
 <Carousel  focusOnSelect={true} responsive={responsive}>
 {this.state.similar && this.state.similar.map(s=>(
 

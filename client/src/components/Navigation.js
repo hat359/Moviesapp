@@ -1,9 +1,8 @@
-import React,{useContext,useState} from 'react'
-import {Navbar} from 'react-bootstrap'
-import Nav from 'react-bootstrap/Nav'
+import React,{useContext} from 'react'
+
 import Usercontext from '../context/Usercontext'
 
-function Navigation(){
+function Navigation(props){
   const {userdata,setUserdata}=useContext(Usercontext)
   
   const str=userdata.user && userdata.user.name.split(" ",1)
@@ -29,32 +28,47 @@ function Navigation(){
   }
 return(
 <div>
-<Navbar className="navbar navbar-static-top" bg="light" expand="lg">
-  <Navbar.Brand href="/"><img src="https://lh3.googleusercontent.com/CtJZQ5wzxkjm6H9fvmmujKJSN9TytDqvmvl_vkWPfi62gObAZWHCGCenm0SKjZEzwO0" /></Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-    <Nav.Link href="/"><span>Movies</span></Nav.Link>
-    <Nav.Link href="/tv"><span>Tv Shows</span></Nav.Link>
-    <Nav.Link href="/mylist"><span>MyList</span></Nav.Link>
-   
-    </Nav>
-    
-    <Nav className="ml-auto">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><img src="https://lh3.googleusercontent.com/CtJZQ5wzxkjm6H9fvmmujKJSN9TytDqvmvl_vkWPfi62gObAZWHCGCenm0SKjZEzwO0" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item " className={props.path==="/" || props.path==="/movie/:movid" ? "active":" "}>
+        <a class="nav-link" href="/">Movies </a>
+      </li>
+      <li class="nav-item" className={props.path==="/tv" ||props.path==="/tv/:tvid" ? "active":" "}>
+        <a class="nav-link" href="/tv">Tv Shows</a>
+      </li>
+      <li class="nav-item" className={props.path==="/mylist"  ? "active":" "}> 
+        <a class="nav-link" href="/mylist">Mylist</a>
+      </li>
      
-      {userdata.user ?( 
-    <div> <span>Welcome {str[0]}!</span>&nbsp <a className="logoutbut" onClick={logout}><span>Logout</span> </a></div> ):(<>
-  <Nav.Link href="/login"><span>SignIn</span></Nav.Link>
-  <Nav.Link href="/register"><span>SignUp</span></Nav.Link>
-</>
-)}
-      
-    </Nav>
+     
+    </ul>
+    <ul class="navbar-nav ml-auto">
+    {userdata.user ?( 
+    <><li class="nav-item">
+   <a id="wel" class="nav-link">Welcome {str[0]}!</a>
+  </li>
+  <li class="nav-item">
+    <p class=" logoutbut" onClick={logout} >Logout</p>
+  </li></>):(<>
+   <li class="nav-item">
+        <a class="nav-link" href="/login">SignIn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/register">SignUp</a>
+      </li>
+    </>)}
+     
+     
+    </ul>
     
-  </Navbar.Collapse>
-</Navbar>
-
-
+  </div>
+</nav>
 
 
 

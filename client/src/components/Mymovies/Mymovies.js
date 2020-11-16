@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Mymovdat from '../Details/Mymovdat'
+import Navigation from '../Navigation'
 
 const img_url='http://image.tmdb.org/t/p/'
 
@@ -41,7 +42,7 @@ render(){
 
 return(
 <div>
-
+<Navigation path={this.props.match.path}/>
 <table class="table table-bordered mylistab">
   <thead>
     <tr>

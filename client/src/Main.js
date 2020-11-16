@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Navigation from './components/Navigation'
 import Banner from './components/carousel/Banner'
 import Grid from './components/Grid'
 
@@ -70,6 +70,7 @@ render(){
 return(
 <div>
  
+<Navigation path={this.props.match.path}/>
 
 
 { 
