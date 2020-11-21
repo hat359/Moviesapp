@@ -90,7 +90,7 @@ this.state.movies[x] &&  <Banner mid={this.state.movies[x].id} image1={`${img_ur
             
             />}
        <section id="gr">
-          <div className="container d-flex justify-content-centre">
+          <div className="container ">
               <div className="row">
               {this.state.movies && this.state.movies.map(movie=>(
                

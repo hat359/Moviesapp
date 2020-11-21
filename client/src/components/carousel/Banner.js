@@ -7,7 +7,7 @@ return(
  <div  > 
 
 
-<Carousel>
+<Carousel className="cara">
   <Carousel.Item>
   {props.p1==="/" ? (<a href={`/movie/${props.mid}`}>  <img
       className="d-block w-100 mimg img-fluid"

@@ -124,7 +124,7 @@ return(
 
 
 {this.state.trail ? (<div className="movietrailer">
-  <iframe  src={`https://www.youtube.com/embed/${this.state.video[0] && this.state.video[0].key}?autoplay=1`} allow="autoplay"/>
+  <iframe  src={`https://www.youtube.com/embed/${this.state.video[0] && this.state.video[0].key}?autoplay=1`} allow="autoplay" allowFullScreen />
  
 </div>):null}
 
