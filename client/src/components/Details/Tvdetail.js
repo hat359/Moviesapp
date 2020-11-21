@@ -188,7 +188,7 @@ return(
 </div>
 ):null}
 
- <div className="container"> 
+ <div className="container cast"> 
  <div className="row">
   {this.state.cast.map(c=>(
   <React.Fragment>

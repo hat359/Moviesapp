@@ -396,16 +396,29 @@ transform: translate(-50%,0);
 
 
 
-@media only screen and (max-width: 1463px) {
+@media only screen and (max-width: 1466px) {
 .card{
-
+width:15rem !important;
 
 }
 
 
 #gr .row{
   display: flexbox;
-margin-left: 120px;
+margin-left: 50px;
+
+}
+#gr1 .row{
+  display: flexbox;
+margin-left: 50px;
+
+}
+.cast .row{
+margin-left: 50px;
+
+}
+.simimg img{
+width: 190px;
 
 }
 
@@ -436,6 +449,7 @@ margin-left: 120px;
       margin-top: 25px;
       border: none;
       width:6rem !important;
+      margin-left: 10px;
       }
       .card img{
         border-radius: 10px;
@@ -456,6 +470,7 @@ margin-left: 120px;
         height: 20px;
         margin-top: 10px;
         width: 6rem;
+        margin-left: 10px;
           }
 
 
