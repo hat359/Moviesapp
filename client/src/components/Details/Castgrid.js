@@ -9,7 +9,7 @@ function Castgrid(props){
 return(
 
 
-<div className="holder">
+<div >
    <div className="col-md-3">
     <div  className="card" style={{width:' 18rem'}}>
  <img className="castimg" src={props.image} className="card-img-top" alt="..."/>

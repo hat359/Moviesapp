@@ -422,6 +422,7 @@ width: 190px;
 
 }
 
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -448,9 +449,9 @@ width: 190px;
       
       margin-top: 25px;
       border: none;
-      width:6rem !important;
-      margin-left: 10px;
-      }
+      width:7rem !important;
+      margin-left: 0px;
+    }
       .card img{
         border-radius: 10px;
       }
@@ -460,19 +461,92 @@ width: 190px;
        
        }
 
-       .progress-bar{
-        color:black;
-        font-weight: 600;
-        
-          }
-          .progress{
-            
-        height: 20px;
-        margin-top: 10px;
-        width: 6rem;
-        margin-left: 10px;
-          }
+      
+          
+            #gr{
+               max-width: 100%;
+              
+            }
+            .holder{
+              
+              margin-left: -15px !important;
+            }
+            .col-md-3{
+              position: relative;
+              margin-left: -5px;
+              
+            }
+            .poster{
+            height: 250px;
+            margin-top: 60px;
 
+            }
+            .details i{
+               font-size: 30px;
+              margin-top: 50px; 
+               
+              
+              
+                              
+            }
+
+            .phone{
+             display: none;
+
+            }
+
+            .table{
+             width:100%;
+
+            }
+            .movietrailer iframe{
+               height:250px;
+               position: absolute;
+               top:31%;
+                width: 400px;
+            }
+            .closetrailer{
+              margin-left: 33%;
+
+
+            }
+            .mylistbut{
+            
+              transform: translate(-50%,-50%);
+               margin-left:50%;
+              margin-top:50px;
+            }
+            .detdesc{
+               width: 350px;
+
+            }
+            .simcara{
+              width: 435px;
+              margin-left: -5%;
+            }
+
+            .simimg img{
+               height: 210px;
+                 width: 120px;
+            }
+            .simcara p{
+                
+                text-align: center;
+               
+            }
+            
+             td img{
+            margin-left: -20px;
+          
+            width: 30px;
+
+             }
+             .tvdetails i{
+              font-size: 30px;
+              margin-top: 50px; 
+               
+
+             }
 
 }
 

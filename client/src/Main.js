@@ -90,8 +90,8 @@ this.state.movies[x] &&  <Banner mid={this.state.movies[x].id} image1={`${img_ur
             
             />}
        <section id="gr">
-          <div className="container-fluid">
-              <div className="row">
+          <div className="container">
+              <div className="row holder" >
               {this.state.movies && this.state.movies.map(movie=>(
                
                    <Grid key={movie.id}

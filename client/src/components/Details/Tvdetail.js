@@ -30,7 +30,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1
+    items: 3
   }
 };
 
@@ -118,7 +118,7 @@ console.log('Clicked')
 render(){
    
 return(
-<div>
+<div className="tvdetails">
   <Navigation path={this.props.match.path}/>
 <div className="poster" style={{backgroundImage:`url('${img_url}w1280/${this.state.mm.backdrop_path}')`}}>
 
@@ -143,10 +143,10 @@ return(
     <tr>
       <th scope="col" style={{width:'10rem'}}>Title</th>
 <td scope="col">{this.state.mm && this.state.mm.original_name}</td>
-      <th scope="col" style={{width:'10rem'}}>Platform</th>
-<td scope="col">{this.state.mm.networks && this.state.mm.networks[0].name}</td>
-      <th scope="col" style={{width:'15rem'}}>Status</th>
-      <td scope="col">{this.state.mm.status}</td>
+      <th scope="col" style={{width:'10rem'}}>Rating</th>
+      <td>{this.state.mm.vote_average}/10</td>
+      <th scope="col" className="phone" style={{width:'15rem'}}>Status</th>
+      <td scope="col" className="phone">{this.state.mm.status}</td>
     </tr>
   </thead>
   <tbody>
@@ -158,8 +158,9 @@ return(
       </td>
       <th>Episodes</th>
       <td>{this.state.mm.number_of_episodes}</td>
-      <th>Rating</th>
-      <td>{this.state.mm.vote_average}/10</td>
+      <th className="phone">Platform</th>
+      <td scope="col" className="phone">{this.state.mm.networks && this.state.mm.networks[0].name}</td>
+      
     </tr>
 
     
@@ -189,7 +190,7 @@ return(
 ):null}
 
  <div className="container cast"> 
- <div className="row">
+ <div className="row holder">
   {this.state.cast.map(c=>(
   <React.Fragment>
   {c.profile_path && <Castgrid name={c.name} char={c.character} image={`${img_url}w500${c.profile_path}`}/>}

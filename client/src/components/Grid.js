@@ -7,7 +7,7 @@ function Grid(props){
 return(
 
 
-<div className="holder">
+<div className="">
    <div className="col-md-3">
     <div className="card" style={{width:' 18rem'}}>
   <a href={`/movie/${props.movid}`}><img src={props.image} className="card-img-top" alt="..."/></a>
@@ -15,9 +15,7 @@ return(
   
    
   </div>
-  <div className="progress">
-  <div className="progress-bar bg-warning" role="progressbar" style={{width: `${props.vote*10}%`}} aria-valuenow={props.vote*10} aria-valuemin="0" aria-valuemax="100">{props.vote}/10</div>
-</div>
+  
 </div>
 </div>
 )

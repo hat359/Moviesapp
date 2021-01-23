@@ -87,7 +87,7 @@ this.state.shows[x] &&  <Banner image1={`${img_url}w1280${this.state.shows[x].ba
             />}
        <section id="gr1">
           <div className="container d-flex justify-content-centre">
-              <div className="row">
+              <div className="row holder">
               {this.state.shows && this.state.shows.map(movie=>(
                
                    <ShowsGrid key={movie.id}

@@ -31,7 +31,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1
+    items: 3
   }
 };
 
@@ -46,7 +46,8 @@ cast:[],
 trail:false,
 video:[],
 similar:[],
-value:0
+value:0,
+ctoggle:false
 }
 
 this.handelclick=this.handelclick.bind(this)
@@ -60,7 +61,8 @@ handelclick(){
     .then(response=>response.json())
     .then(data=>{
        this.setState({
-           cast:data.cast
+           cast:data.cast,
+           ctoggle:!this.state.ctoggle
        })
        window.scrollTo(0,500);
         
@@ -177,8 +179,8 @@ return(
 <td scope="col">{this.state.mm && this.state.mm.original_title}</td>
       <th scope="col" style={{width:'10rem'}}>Release Date</th>
 <td scope="col">{this.state.mm.release_date}</td>
-      <th scope="col" style={{width:'15rem'}}>Status</th>
-      <td scope="col">{this.state.mm.status}</td>
+      <th className="phone" scope="col" style={{width:'15rem'}}>Status</th>
+      <td className="phone" scope="col">{this.state.mm.status}</td>
       
     </tr>
   </thead>
@@ -188,8 +190,8 @@ return(
       <td>{this.state.mm.runtime} mins</td>
       <th>Rating</th>
       <td>{this.state.mm.vote_average}/10</td>
-      <th>Vote Count</th>
-      <td>{this.state.mm.vote_count}</td>
+      <th className="phone">Vote Count</th>
+      <td className="phone">{this.state.mm.vote_count}</td>
     </tr>
    
     
@@ -221,10 +223,10 @@ return(
 ):null}
 
  <div className="container cast"> 
- <div className="row">
+ <div className="row holder">
   {this.state.cast && this.state.cast.map(c=>(
     <React.Fragment>
-    {c.profile_path && <Castgrid name={c.name} char={c.character} image={`${img_url}w500${c.profile_path}`}/>}
+    {this.state.ctoggle ? c.profile_path && <Castgrid name={c.name} char={c.character} image={`${img_url}w500${c.profile_path}`}/>:null}
   </React.Fragment>
     
  ))} 
