@@ -19,7 +19,8 @@ function Navigation(props){
 
   })
     localStorage.setItem("auth-token","")
-    localStorage.removeItem("userId")
+    localStorage.setItem("userId","")
+    localStorage.setItem('reclist',"")
     window.location.reload()
 
  
@@ -44,6 +45,9 @@ return(
       </li>
       <li class="nav-item" className={props.path==="/mylist"  ? "active":" "}> 
         <a class="nav-link" href="/mylist">Mylist</a>
+      </li>
+      <li class="nav-item" className={props.path==="/recmov"  ? "active":" "}> 
+        <a class="nav-link" href="/recmov">Recommended Movies</a>
       </li>
      
      

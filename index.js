@@ -19,7 +19,8 @@ const connect = mongoose.connect(config.mongoURI,
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
     app.use(cors())
-    app.use(express.json())
+    app.use(express.json({limit: '100mb'}))
+    
 
     app.use('/api/user',authroute)
     app.use('/api/favorites',myroute)

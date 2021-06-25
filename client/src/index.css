@@ -138,6 +138,10 @@ transform: translate(0,8px);
 cursor: pointer;
 
 }
+.rec{
+margin-top: 4%;
+
+}
 .mimg img{
 width: 100%;
 height: auto;
@@ -166,6 +170,12 @@ margin-left: -10%;
     background-color: black;
     
     }
+
+    #recgr{
+   
+      background-color: black;
+      
+      }
     #gr1{
    
       background-color: black;
@@ -222,6 +232,41 @@ background-color: black;
 
 
   }
+  .recbut{
+    position: absolute;
+margin-top: -5%;
+height: 150px;
+transform: translate(-50%,0%);
+left: 50%;
+  }
+  .notlogged{
+    position: absolute;
+   font-size: 50px;
+   transform: translate(-50%,-50%);
+   left:50%;
+   top:50%;
+   font-weight: 600;
+   color: lightgrey;
+
+  }
+  .recbut button{
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .recbut button:hover{
+  background-color:rgb(196, 167, 223);
+  color: white;
+
+  }
+.loading img{
+height: 150px;
+position: absolute;
+transform: translate(-50%,0%);
+margin-left: 50%;
+margin-top: -10%;
+}
+
   .poster{
     height: 70vh;
     background-size: cover;
@@ -348,10 +393,11 @@ border: 2px solid crimson
 
 
 }
-table{
+.mylist .table{
+margin-top: 15%;
+}
+.table{
 margin-top: 30px;
-
-
 }
 
 .removebut{

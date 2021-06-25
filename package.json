@@ -31,6 +31,7 @@
     "mongoose": "^5.10.11",
     "nodemon": "^2.0.6",
     "popper.js": "^1.16.1",
+    "python-shell": "^3.0.0",
     "react-bootstrap-range-slider": "^2.0.2",
     "react-multi-carousel": "^2.5.5",
     "react-router-dom": "^5.2.0",

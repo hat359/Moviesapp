@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {auth} = require('../middleware/verify')
 const Mylist =require('../model/Mylist')
+const {spawn}=require('child_process')
 
 router.post('/mymovies',auth,async (req,res)=>{
 const mylist =await Mylist.find({userid:req.user})
@@ -56,5 +57,43 @@ router.post("/remove", auth, (req, res) => {
 
   })
   });
+
+
+
+router.post("/reclist",(req,res)=>{
+  //  console.log(req.body.cast)
+  
+  
+const chpy=spawn('python',req.body.reclist)
+
+chpy.stdout.on('data',(data)=>{
+  
+  console.log(`stdout: ${data}`)
+  return res.status(200).send({movlist:data.toString()})
+})
+
+var cstring=""
+for(var i=0;i<req.body.cast.length;i++){
+
+cstring=cstring+req.body.cast[i]+'ssss'
+
+}
+
+chpy.stdin.write(cstring)
+chpy.stdin.end()
+
+chpy.stderr.on('data',(data)=>{
+  
+  console.log(`stderr: ${data}`)
+
+  
+
+}
+
+)
+
+
+})
+
 
 module.exports=router
