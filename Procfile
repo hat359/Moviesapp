@@ -1,1 +1,1 @@
-web:gunicorn rec.py
+worker:python rec.py
