@@ -1,1 +1,1 @@
-worker:python rec.py
+web: python rec.py
