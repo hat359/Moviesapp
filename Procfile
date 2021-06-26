@@ -1,1 +1,1 @@
-web:gunicorn rec:app
+web:gunicorn rec.py
