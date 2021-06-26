@@ -39,8 +39,8 @@ cdf = cdf.rename(columns = {"id":"movie_id"})
 
 
 
-df1=pd.read_csv('../tmdb_5000_movies.csv')
-df2=pd.read_csv('../tmdb_5000_credits.csv')
+df1=pd.read_csv('tmdb_5000_movies.csv')
+df2=pd.read_csv('tmdb_5000_credits.csv')
 
 
 ty=dfnew['original_title'].values.tolist()
