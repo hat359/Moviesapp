@@ -69,7 +69,7 @@ const chpy=spawn('python',req.body.reclist)
 chpy.stdout.on('data',(data)=>{
   
   console.log(`stdout: ${data}`)
-   return res.status(200).send({movlist:data.toString()})
+    res.status(200).send({movlist:data.toString()})
 })
 
 var cstring=""
