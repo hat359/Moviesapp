@@ -39,7 +39,7 @@ res.send(saveduser)
 }catch(err){
 
 
-res.status(400).send(err)
+return res.status(400).send(err)
 }
 
 

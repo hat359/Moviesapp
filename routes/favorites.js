@@ -7,7 +7,7 @@ const {spawn}=require('child_process')
 router.post('/mymovies',auth,async (req,res)=>{
 const mylist =await Mylist.find({userid:req.user})
 if(mylist.length===0) return res.status(404).send("Not Found")
-res.status(200).send(mylist)
+return res.status(200).send(mylist)
 
 
 })
@@ -42,7 +42,7 @@ router.post('/added',auth,async (req,res)=>{
   const mylist= await Mylist.find({userid:req.user,movieid:req.body.movieid})
  if(mylist.length===0) return res.status(404).send('not found')
 
-  res.status(200).send({success:true,added:true})
+  return res.status(200).send({success:true,added:true})
 
 })
 
@@ -69,7 +69,7 @@ const chpy=spawn('python',req.body.reclist)
 chpy.stdout.on('data',(data)=>{
   
   console.log(`stdout: ${data}`)
-  return res.status(200).send({movlist:data.toString()})
+   return res.status(200).send({movlist:data.toString()})
 })
 
 var cstring=""
