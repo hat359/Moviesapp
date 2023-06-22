@@ -53,8 +53,8 @@ ty=dfnew['original_title'].values.tolist()
 df1=df1.drop(['keywords'], axis = 1)
 
 
-df1=df1.append(dfnew,ignore_index = True)
-df2=df2.append(cdf,ignore_index = True)
+df1=pd.concat([df1,dfnew],ignore_index = True)
+df2=pd.concat([df2,cdf],ignore_index = True)
 
 df2.columns=['id','title','cast','crew']
 df1=df1.merge(df2,on='id')

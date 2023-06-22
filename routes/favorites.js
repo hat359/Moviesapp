@@ -64,7 +64,7 @@ router.post("/reclist",(req,res)=>{
   //  console.log(req.body.cast)
   
   
-const chpy=spawn('python',req.body.reclist)
+const chpy=spawn('python3',req.body.reclist)
 
 chpy.stdout.on('data',(data)=>{
   

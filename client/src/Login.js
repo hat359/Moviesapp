@@ -32,7 +32,7 @@ name:this.state.name,
 email:this.state.email,
 password:this.state.password
 }
-axios.post('/api/user/login',variable)
+axios.post('http://localhost:6060/api/user/login',variable)
 .then(response=>{
     const {setUserdata}=this.context
 
@@ -66,7 +66,7 @@ render(){
     
     return(
 <div className="bckgr">
-    <img src="https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg" alt="backdrop"/>
+    <img src="https://cdn.mos.cms.futurecdn.net/rDJegQJaCyGaYysj2g5XWY-1920-80.jpg.webp" alt="backdrop"/>
     <form className="form">
 <div className="inp" >
     <h1 className="signin">Sign In</h1>

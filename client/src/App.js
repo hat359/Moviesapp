@@ -36,10 +36,10 @@ token=''
 
 }
 
-const tokenresp=await axios.post('/api/user/validtoken',null,{headers:{"t-auth-token":token}})
+const tokenresp=await axios.post('http://localhost:6060/api/user/validtoken',null,{headers:{"t-auth-token":token}})
 
 if(tokenresp.data){
-const userresp= await axios.get('/api/user/',{headers:{"t-auth-token":token}})
+const userresp= await axios.get('http://localhost:6060/api/user/',{headers:{"t-auth-token":token}})
 setUserdata({
 
 token,

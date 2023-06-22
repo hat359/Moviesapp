@@ -32,7 +32,7 @@ name:this.state.name,
 email:this.state.email,
 password:this.state.password
 }
-axios.post('/api/user/register',variable)
+axios.post('http://localhost:6060/api/user/register',variable)
 .then(response=>{
     this.setState({
         error:''
@@ -58,7 +58,7 @@ render(){
 
     return(
 <div className="bckgr">
-<img src="https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg"/>
+<img src="https://cdn.mos.cms.futurecdn.net/rDJegQJaCyGaYysj2g5XWY-1920-80.jpg.webp"/>
     
     <form class="form" >
         <div className="inpreg">

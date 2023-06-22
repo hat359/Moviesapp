@@ -26,7 +26,7 @@ const connect = mongoose.connect(config.mongoURI,
     app.use('/api/favorites',myroute)
 
 
-const port =process.env.PORT || 5000
+const port =process.env.PORT || 6060
 
 if(process.env.NODE_ENV==="production"){
 app.use(express.static('client/build'))

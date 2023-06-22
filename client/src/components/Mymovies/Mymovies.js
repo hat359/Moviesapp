@@ -32,7 +32,7 @@ componentDidMount(){
     const variable = {
       userFrom:localStorage.getItem('userId')}
       let token = localStorage.getItem('auth-token')
-axios.post('/api/favorites/mymovies',variable,{headers:{"t-auth-token":token}})
+axios.post('http://localhost:6060/api/favorites/mymovies',variable,{headers:{"t-auth-token":token}})
 .then(response=>{
 
   this.setState({
@@ -61,7 +61,7 @@ hand(){
   this.setState({
     loading:true
   })
-  axios.post('/api/favorites/reclist',variable,{headers:{"t-auth-token":token}})
+  axios.post('http://localhost:6060/api/favorites/reclist',variable,{headers:{"t-auth-token":token}})
   .then(response=>{
   
  localStorage.setItem('reclist',response.data.movlist)
