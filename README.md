@@ -17,3 +17,9 @@
 
 ## Cast
 <img width="1440" alt="Screenshot 2023-06-21 at 12 02 48 PM" src="https://github.com/hat359/Moviesapp/assets/48184672/bd8ba4cd-f02f-4e2e-9412-8cd5440c1c76">
+
+## My List
+![Screenshot_2023-06-27_11-57-11](https://github.com/hat359/Moviesapp/assets/48184672/71315489-c2cb-435b-8230-ecc50c3c571c)
+
+## Recommendations
+![Screenshot_2023-06-27_12-03-55](https://github.com/hat359/Moviesapp/assets/48184672/43d1997b-d945-48f5-a886-bfd40300db6a)
